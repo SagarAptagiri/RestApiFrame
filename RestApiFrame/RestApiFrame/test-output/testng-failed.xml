@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.Employeeapi.utilities.Listeners"/>
+  </listeners>
+  <test name="Test">
+    <classes>
+      <class name="com.Employeeapitestcases.TC001_GET_ALL_Employes"/>
+      <class name="RestApiFrame.RestApiFrame.AppTest"/>
+      <class name="com.Employeeapitestcases.TC005_Delete_Employee_Record"/>
+      <class name="com.Employeeapitestcases.TC004_Put_Employee_Record"/>
+      <class name="com.Employeeapitestcases.TC003_Post_Employee"/>
+      <class name="com.Employeeapitestcases.TC002_Get_Single_Employees_Records"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.Employeeapitestcases.TC003_Post_Employee">
+        <methods>
+          <include name="checkResponseBody"/>
+          <include name="postEmployee"/>
+          <include name="tearDown"/>
+          <include name="checkcontentEncoding"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.Employeeapitestcases.TC003_Post_Employee -->
+      <class name="com.Employeeapitestcases.TC001_GET_ALL_Employes">
+        <methods>
+          <include name="checkContentType"/>
+          <include name="checkStatusCode"/>
+          <include name="getAllEmployees"/>
+          <include name="tearDown"/>
+          <include name="checkStatusLine"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.Employeeapitestcases.TC001_GET_ALL_Employes -->
+      <class name="com.Employeeapitestcases.TC002_Get_Single_Employees_Records">
+        <methods>
+          <include name="checkStatusCode"/>
+          <include name="getSingleEmployees"/>
+          <include name="checkResponseBody"/>
+          <include name="tearDown"/>
+          <include name="checkContentType"/>
+          <include name="setup"/>
+          <include name="checkStatusLine"/>
+        </methods>
+      </class> <!-- com.Employeeapitestcases.TC002_Get_Single_Employees_Records -->
+      <class name="com.Employeeapitestcases.TC004_Put_Employee_Record">
+        <methods>
+          <include name="putEmployee"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="checkResponseBody"/>
+          <include name="checkcontentEncoding"/>
+        </methods>
+      </class> <!-- com.Employeeapitestcases.TC004_Put_Employee_Record -->
+      <class name="com.Employeeapitestcases.TC005_Delete_Employee_Record">
+        <methods>
+          <include name="checkContentType"/>
+          <include name="checkStatusLine"/>
+          <include name="deleteEmployee"/>
+          <include name="checkResponseBody"/>
+          <include name="checkcontentlength"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.Employeeapitestcases.TC005_Delete_Employee_Record -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
